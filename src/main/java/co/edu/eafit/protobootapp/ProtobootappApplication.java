@@ -41,6 +41,7 @@ public class ProtobootappApplication {
     @GetMapping("/cubo")
     public String cubo(@RequestParam(value = "numero", defaultValue = "0") Double numero) {
         this.calculadora = new Calculadora();
+        system.out.println("Cambio-test")
         return String.format("El cubo de %f es %f", numero, this.calculadora.cubo(numero));
     }
 
